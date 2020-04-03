@@ -11,7 +11,7 @@ class MongodbPipeline(object):
     collection_name = "zillow_rentals"
 
     def open_spider(self, spider):
-        self.client = MongoClient("mongodb+srv://kdavis:testtest@cluster0-rnbwg.mongodb.net/test?retryWrites=true&w=majority")
+        self.client = MongoClient("<ConnectionString>")
         self.db = self.client.zillow
 
     def close_spider(self, spider):
